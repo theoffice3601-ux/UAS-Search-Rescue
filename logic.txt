@@ -1,0 +1,3 @@
+Now to find the logic:
+each camp has:  1. color 2. location 3. capacity.
+each casualty(star/square/triangle)has location and capacity and color
