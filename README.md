@@ -5,7 +5,7 @@ The objective is to analyze aerial images and assist in rescue decision-making b
 
 ---
 
-## 📌 Problem Overview
+##  Problem Overview
 
 Given aerial images captured by a UAV:
 - Segment land and water regions
@@ -14,20 +14,17 @@ Given aerial images captured by a UAV:
 - Assign casualties to camps using logical constraints
 - Compute an image-level rescue priority metric
 
-The focus of this project is **explainable engineering logic**, not pixel-perfect detection.
 
----
+##  Pipeline Stages
 
-## 🧠 Pipeline Stages
-
-### **Stage 1 – Land vs Water Segmentation**
+### Stage 1 – Land vs Water Segmentation
 - Performed using HSV color thresholding
 - Green regions are identified as land
 - This stage intentionally over-segments green areas
 
 ---
 
-### **Stage 2 – Camp Detection**
+### Stage 2 – Camp Detection
 - Camps are detected using **geometric constraints**
   - Area filtering
   - Circularity check
@@ -39,7 +36,7 @@ The focus of this project is **explainable engineering logic**, not pixel-perfec
 
 ---
 
-### **Stage 3 – Casualty Detection**
+### Stage 3 – Casualty Detection
 - Land regions are removed to isolate foreground objects
 - Binary thresholding and morphological operations are applied
 - Shape approximation is used for classification:
@@ -49,7 +46,7 @@ The focus of this project is **explainable engineering logic**, not pixel-perfec
 
 ---
 
-### **Stage 4 – Casualty to Camp Assignment**
+### Stage 4 – Casualty to Camp Assignment
 - Casualties are sorted by priority (highest first)
 - Each casualty is assigned to the nearest available camp
 - Camp capacity constraints are enforced
@@ -71,13 +68,13 @@ Pr = (Total priority of all camps) / (Number of casualties)
 
 ---
 
-### **Stage 7 – Image Ranking**
+##Image Ranking**
 - Images are ranked in descending order of `Pr`
 - Higher `Pr` indicates higher rescue urgency
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 - Python
 - OpenCV
 - NumPy
@@ -85,7 +82,7 @@ Pr = (Total priority of all camps) / (Number of casualties)
 
 ---
 
-## ⚠️ Assumptions & Limitations
+# Assumptions & Limitations
 - Color-based segmentation may include non-land green objects
 - Shape detection may misclassify some casualties
 - Distance-based assignment is greedy, not globally optimal
@@ -94,5 +91,5 @@ These limitations are documented as part of the learning process.
 
 ---
 
-## 📁 Repository Structure
+
 
