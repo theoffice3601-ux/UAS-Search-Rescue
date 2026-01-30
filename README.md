@@ -80,14 +80,8 @@ Pr = (Total priority of all camps) / (Number of casualties)
 - NumPy
 - Git & GitHub
 
----
 
-# Assumptions & Limitations
-- Color-based segmentation may include non-land green objects
-- Shape detection may misclassify some casualties
-- Distance-based assignment is greedy, not globally optimal
 
-These limitations are documented as part of the learning process.
 
 ---
 
