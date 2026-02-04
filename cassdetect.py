@@ -57,6 +57,7 @@ for c in cass:
         1
     )
 
-cv2.imshow("Stage 3 - Casualties Detected", debug)
+
+cv2.imshow("casualty", debug)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
