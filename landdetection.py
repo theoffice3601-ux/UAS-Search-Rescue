@@ -8,7 +8,7 @@ hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 lowland = np.array([40, 80, 80])
 uppland = np.array([80, 220, 220])
 land_mask = cv2.inRange(hsv, lowland, uppland)
-
+cv2.imshow("land mask",land_mask)
 # Area filtering
 contours, _ = cv2.findContours(land_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 clean_mask = np.zeros_like(land_mask)
