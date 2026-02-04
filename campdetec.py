@@ -75,7 +75,7 @@ for cnt in contours:
     })
     cv2.circle(output,(cx,cy),3,(0,0,255),-1)
     # here ouput is the image on which we are drawing
-    #4 is radious of the circle which denotes the centre
+    #3 is radious of the circle which denotes the centre
 # 0,0,255 is color of centre
 #-1 means fill the centre completely red.
 cv2.imshow("grey",grey)#grey helps us better identify shapes
