@@ -24,12 +24,5 @@ land_visual = image.copy()
 land_visual[land_mask == 255] = [0, 255, 0]
 
 
-
-
-
-
-
-
-
 cv2.imshow("landonly",land_visual)
 cv2.waitKey(0)
